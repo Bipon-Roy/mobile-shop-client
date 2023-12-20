@@ -1,10 +1,13 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import Home from "./Pages/Home/Home/Home";
+
+import Navbar from "./Pages/Shared/Navbar/Navbar";
 
 function App() {
     return (
-        <div className="container mx-auto">
-            <Home />
+        <div>
+            <Navbar />
+            <Outlet />
         </div>
     );
 }
