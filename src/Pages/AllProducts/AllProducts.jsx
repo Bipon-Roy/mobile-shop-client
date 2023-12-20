@@ -35,7 +35,7 @@ const AllProducts = () => {
         );
     }
     return (
-        <div className="flex gap-5">
+        <div className="flex gap-5 max-w-[1420px] mx-auto mt-5">
             <div className="w-[20%]">
                 <Sidebar
                     setSortOrder={setSortOrder}
