@@ -4,17 +4,15 @@ const Cards = ({ card }) => {
     const { _id, photo, title, shortDesc, name, price, OS, memory, processor } = card;
 
     return (
-        <div className="flex flex-col bg-base-100 shadow-xl transition-all hover:scale-105">
-            <Link to={`/phoneDetails/${_id}`}>
-                <figure>
-                    <img className="h-[200px] w-full" src={photo} alt={title} />
-                </figure>
-            </Link>
+        <div className="flex flex-col bg-base-100 shadow-xl">
+            <div className="px-5">
+                <img className="h-[180px] w-full" src={photo} alt={title} />
+            </div>
 
-            <div className="p-5 text-center">
+            <div className="px-5 text-center ">
                 <p className="font-medium text-sm">{shortDesc}</p>
 
-                <div className="my-3 text-base">
+                <div className="my-3 text-sm">
                     <p className="font-medium ">
                         <span className="text-primary">{name}</span>
                     </p>
@@ -30,6 +28,20 @@ const Cards = ({ card }) => {
                     <p className="font-medium">
                         Processor: <span className="text-primary">{processor}</span>
                     </p>
+                </div>
+                <div className="mb-5 flex gap-3 justify-center ">
+                    <Link
+                        className="px-3 py-1 rounded-md text-sm font-medium text-white bg-primary"
+                        to={`/phoneDetails/${_id}`}
+                    >
+                        See Details
+                    </Link>
+                    <Link
+                        className="px-3 py-1 rounded-md text-sm font-medium border text-primary border-primary"
+                        to={`/phoneDetails/${_id}`}
+                    >
+                        Add to Cart
+                    </Link>
                 </div>
             </div>
         </div>
