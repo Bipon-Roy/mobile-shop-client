@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 const Cards = ({ card }) => {
-    const { _id, photo, title, shortDesc, price, OS, memory, processor } = card;
+    const { _id, photo, title, shortDesc, name, price, OS, memory, processor } = card;
 
     return (
         <div className="flex flex-col bg-base-100 shadow-xl transition-all hover:scale-105">
@@ -15,6 +15,9 @@ const Cards = ({ card }) => {
                 <p className="font-medium text-sm">{shortDesc}</p>
 
                 <div className="my-3 text-base">
+                    <p className="font-medium ">
+                        <span className="text-primary">{name}</span>
+                    </p>
                     <p className="font-medium ">
                         Price: <span className="text-primary">{price}$</span>
                     </p>
