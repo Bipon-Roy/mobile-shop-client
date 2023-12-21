@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <div>
             <nav className="bg-black px-5 lg:px-0">
-                <div className="max-w-[1380px] mx-auto py-5 flex justify-between items-center">
+                <div className="max-w-[1380px] mx-auto py-3 flex justify-between items-center">
                     <div className="flex items-center gap-4">
                         <div className="py-1 w-[140px]">
                             <img className="block w-full" src={logo} alt="#MobileShop" />

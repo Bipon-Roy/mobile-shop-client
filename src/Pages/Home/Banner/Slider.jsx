@@ -1,4 +1,5 @@
 // importing images for slider
+
 import slider1 from "../../../assets/Images/Slider1.webp";
 import slider2 from "../../../assets/Images/Slider2.webp";
 import slider3 from "../../../assets/Images/Slider3.webp";
@@ -17,9 +18,11 @@ import { Autoplay, Pagination } from "swiper/modules";
 const Slider = () => {
     return (
         <Swiper
-            navigation={true}
             modules={[Pagination, Autoplay]}
             className="mySwiper"
+            pagination={{
+                clickable: true,
+            }}
             autoplay={{
                 delay: 3500,
                 disableOnInteraction: false,

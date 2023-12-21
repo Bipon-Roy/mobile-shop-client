@@ -10,7 +10,7 @@ const NavMenu = () => {
                 <NavLink to="/about">About</NavLink>
             </li>
             <li className="mr-5 font-medium">
-                <NavLink to="/products">Products</NavLink>
+                <NavLink to="/products">All Products</NavLink>
             </li>
         </>
     );
