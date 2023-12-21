@@ -1,6 +1,6 @@
 [
     {
-        "name": "Iphone Update",
+        "name": "Iphone 14 Pro Max",
         "brandName": "Apple",
         "type": "Phone",
         "price": 700,
@@ -9,7 +9,7 @@
         "photo": "https://i.ibb.co/Lz54tM2/i-Phone-14-Pro-Max-9907.jpg",
         "keyFeature": " A15 Bionic chip, Super Retina XDR display, dual-camera system, iOS 15, 5G capable",
         "desc": "The Apple iPhone 13 is a masterpiece of mobile technology. It features a powerful A15 Bionic chip for lightning-fast performance, a stunning Super Retina XDR display, and a dual-camera system for capturing amazing photos and videos. With iOS 15, you get the latest features and updates. Plus, it's 5G capable for super-fast connectivity.",
-        "processor": "A15 Bionic chip",
+        "processor": "Bionic Chip",
         "memory": "128gb",
         "OS": "iOS"
     },
@@ -23,7 +23,7 @@
         "photo": "https://i.ibb.co/wQgRP5q/Air-Pods-Max-White.jpg",
         "desc": "AirPods Max redefine your audio experience with Active Noise Cancellation, delivering immersive sound. Enjoy Spatial Audio for a cinematic feel, seamless pairing with your Apple devices, and long-lasting battery life for all-day music and calls.",
         "keyFeature": " Active Noise Cancellation, Spatial Audio, seamless pairing, long battery life.",
-        "processor": "Bionic chip",
+        "processor": "Bionic Chip",
         "memory": "128gb",
         "OS": "iOS"
     },
@@ -37,7 +37,7 @@
         "photo": "https://i.ibb.co/P4YZTY0/apple-macbook.jpg",
         "desc": "The MacBook Pro is the epitome of laptop excellence. It boasts a stunning Retina display for vibrant visuals, a powerful Intel or Apple Silicon chip for top-tier performance, macOS for a seamless user experience, and a sleek design that's both stylish and portable.",
         "keyFeature": "Retina display, powerful Intel/Apple Silicon chip, macOS, sleek design.",
-        "processor": "Apple M1 chip",
+        "processor": "Bionic Chip",
         "memory": "64gb",
         "OS": "iOS"
     },
@@ -45,7 +45,7 @@
         "name": "Apple Watch",
         "brandName": "Apple",
         "type": "Watch",
-        "price": "400",
+        "price": 400,
         "shortDesc": "Elegance on your wrist. Our watches blend style and functionality effortlessly.",
         "ratings": "4",
         "photo": "https://i.ibb.co/cTTb5mc/apple-watch.png",
@@ -268,7 +268,7 @@
     {
         "name": "OnePlus Smart Watch",
         "brandName": "Oneplus",
-        "type": "Watch",
+        "type": "Phone",
         "price": 450,
         "shortDesc": "Enhance your daily routine with OnePlus smartwatches. Where tech meets your wrist, seamlessly.",
         "ratings": "4",

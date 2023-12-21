@@ -36,7 +36,7 @@ const AllProducts = () => {
     }
     return (
         <div className="flex gap-5 max-w-[1420px] mx-auto mt-5">
-            <div className="w-[20%]">
+            <div className="w-[20%] hidden lg:block">
                 <Sidebar
                     setSortOrder={setSortOrder}
                     setOS={setOS}
@@ -50,7 +50,7 @@ const AllProducts = () => {
             </div>
             <div className="flex-1">
                 {phones.length > 0 ? (
-                    <div className="mb-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-6 md:mx-8 lg:mx-0">
+                    <div className="mb-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-10 lg:mx-0">
                         {phones.map((card) => (
                             <Cards key={card._id} card={card}></Cards>
                         ))}
