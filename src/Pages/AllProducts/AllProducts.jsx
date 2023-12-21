@@ -55,7 +55,7 @@ const AllProducts = () => {
                     <ul className="w-[60%]">
                         {/* Sidebar content here */}
                         <Sidebar
-                            setSortOrder={setSortOrder}
+                            setSortOrder={setSortOrder} //sending callback functions as props
                             setOS={setOS}
                             setName={setName}
                             setType={setType}
@@ -70,7 +70,7 @@ const AllProducts = () => {
             {/*end of sidebar */}
             <div className="w-[20%] hidden lg:block">
                 <Sidebar
-                    setSortOrder={setSortOrder}
+                    setSortOrder={setSortOrder} //sending callback functions as props
                     setOS={setOS}
                     setName={setName}
                     setType={setType}

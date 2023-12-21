@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+// reusable component for category item
 const CategoryItem = ({ img, title }) => {
     return (
         <div className="py-6  flex flex-col justify-center items-center bg-[#F6F8FA] space-y-2 rounded-xl hover:hover:text-primary">

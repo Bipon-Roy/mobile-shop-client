@@ -14,12 +14,12 @@ const queryClient = new QueryClient();
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App />,
+        element: <App />, //Main Layout
         errorElement: <Error />,
         children: [
             {
                 path: "/",
-                element: <Home />,
+                element: <Home />, //Main Component for home pages
             },
             {
                 path: "/products",
@@ -28,7 +28,8 @@ const router = createBrowserRouter([
             {
                 path: "/phoneDetails/:id",
                 element: <ProductDetails />,
-                loader: ({ params }) => fetch(`http://localhost:5000/phones/${params.id}`),
+                loader: ({ params }) =>
+                    fetch(`https://mobile-shop-server-nu.vercel.app/phones/${params.id}`),
             },
         ],
     },

@@ -13,6 +13,7 @@ const Sidebar = ({
         <div className="flex flex-col min-h-screen  bg-[#F6F8FA] p-5">
             <div className="flex flex-col justify-center space-y-3">
                 <h1 className="text-lg font-medium text-primary text-center">Search Products</h1>
+                {/* filter products by name */}
                 <div className="divider text-sm my-2">By Product Name</div>
                 <input
                     className="border py-2 pl-3  focus:outline-none"
@@ -20,6 +21,7 @@ const Sidebar = ({
                     placeholder="Product Name"
                     onChange={(e) => setName(e.target.value)}
                 />
+                {/* filter products by price */}
                 <div className="divider text-sm my-2">By Product Price</div>
                 <input
                     className="border py-2 pl-3  focus:outline-none"
@@ -36,6 +38,7 @@ const Sidebar = ({
             </div>
             <div>
                 <div className="my-4">
+                    {/* filter products by OS */}
                     <div>
                         <div className="divider text-sm my-3">By OS</div>
                         <select
@@ -47,6 +50,7 @@ const Sidebar = ({
                             <option value="iOS">iOS</option>
                         </select>
                     </div>
+                    {/* filter products by Storage */}
                     <div>
                         <div className="divider text-sm my-3">By Memory</div>
                         <select
@@ -59,6 +63,7 @@ const Sidebar = ({
                             <option value="256gb">256gb</option>
                         </select>
                     </div>
+                    {/* filter products by Types */}
                     <div>
                         <div className="divider text-sm my-3">By Type</div>
                         <select

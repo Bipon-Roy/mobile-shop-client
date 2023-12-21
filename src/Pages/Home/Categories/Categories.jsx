@@ -1,5 +1,4 @@
 // Importing images
-
 import phones from "../../../assets/Images/Phones20Tablets.webp";
 import power from "../../../assets/Images/power-adapter-6971.webp";
 import macbook from "../../../assets/Images/Macbook-01-4687.webp";

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosUrl = axios.create({
-    baseURL: "http://localhost:5000",
+    baseURL: "https://mobile-shop-server-nu.vercel.app",
 });
 const useAxiosUrl = () => {
     return axiosUrl;

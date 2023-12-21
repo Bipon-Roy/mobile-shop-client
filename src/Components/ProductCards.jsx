@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+//styled-components button
 const DetailsBtn = styled.button`
     padding: 4px 6px;
     font-size: 0.75rem;

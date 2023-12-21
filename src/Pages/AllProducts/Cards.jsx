@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+//styled-components button
 const DetailsBtn = styled.button`
     padding: 4px 6px;
     font-size: 0.75rem;
@@ -26,6 +27,8 @@ const AddToCartBtn = styled.button`
         padding: 4px 12px;
     }
 `;
+
+//card component for only All Products page
 const Cards = ({ card }) => {
     const { _id, photo, title, name, price, OS, memory, processor } = card;
 
