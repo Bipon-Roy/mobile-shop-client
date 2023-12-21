@@ -50,9 +50,8 @@ const Cards = ({ card }) => {
                     <Link to={`/phoneDetails/${_id}`}>
                         <DetailsBtn>See Details</DetailsBtn>
                     </Link>
-                    <Link to={`/phoneDetails/${_id}`}>
-                        <AddToCartBtn>Add to Cart</AddToCartBtn>
-                    </Link>
+
+                    <AddToCartBtn>Add to Cart</AddToCartBtn>
                 </div>
             </div>
         </div>
