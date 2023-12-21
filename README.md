@@ -16,7 +16,7 @@ Download the [NodeJS](https://nodejs.org/en) and install it.
 git clone https://github.com/Bipon-Roy/mobile-shop-client
 ```
 
-Now, open the <b>mobile-shop-server</b> folder in your <b>IDE (VS Code recommended)</b> and run the following commands on <b>terminal (Git Bash)</b>
+Now, open the <b>mobile-shop-client</b> folder in your <b>IDE (VS Code recommended)</b> and run the following commands on <b>terminal (Git Bash)</b>
 
 <b>Using NPM</b>
 
