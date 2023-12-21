@@ -8,7 +8,7 @@ import Services from "../Services/Services";
 
 const Home = () => {
     return (
-        <div className="max-w-[1380px] mx-auto">
+        <div className="max-w-[1380px] mx-auto relative">
             <Banner />
             <Services />
             <Categories />

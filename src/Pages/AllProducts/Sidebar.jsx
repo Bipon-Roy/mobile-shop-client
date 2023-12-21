@@ -103,13 +103,13 @@ const Sidebar = ({
     );
 };
 Sidebar.propTypes = {
-    setOS: PropTypes.func,
-    setMemory: PropTypes.func,
-    setType: PropTypes.func,
-    setProcessor: PropTypes.func,
-    setName: PropTypes.func,
-    setMinPrice: PropTypes.func,
-    setMaxPrice: PropTypes.func,
-    setSortOrder: PropTypes.func,
+    setOS: PropTypes.func.isRequired,
+    setMemory: PropTypes.func.isRequired,
+    setType: PropTypes.func.isRequired,
+    setProcessor: PropTypes.func.isRequired,
+    setName: PropTypes.func.isRequired,
+    setMinPrice: PropTypes.func.isRequired,
+    setMaxPrice: PropTypes.func.isRequired,
+    setSortOrder: PropTypes.func.isRequired,
 };
 export default Sidebar;

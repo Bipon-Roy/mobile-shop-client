@@ -8,7 +8,7 @@ const ProductDetails = () => {
 
     return (
         <div className="max-w-[1380px] mx-auto my-11">
-            <div className="flex flex-col md:flex-row mx-6 lg:mx-0  gap-10">
+            <div className="flex flex-col md:flex-row mx-6 lg:mx-0 gap-5 lg:gap-10">
                 <div className="rounded-xl">
                     <img src={photo} alt={name} />
                 </div>
