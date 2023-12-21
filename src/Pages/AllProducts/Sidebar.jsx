@@ -24,12 +24,14 @@ const Sidebar = ({
                 {/* filter products by price */}
                 <div className="divider text-sm my-2">By Product Price</div>
                 <input
+                    min="0"
                     className="border py-2 pl-3  focus:outline-none"
                     type="number"
                     placeholder="Min Price"
                     onChange={(e) => setMinPrice(e.target.value)}
                 />
                 <input
+                    min="200"
                     className="border py-2 pl-3  focus:outline-none"
                     type="number"
                     placeholder="Max Price"
