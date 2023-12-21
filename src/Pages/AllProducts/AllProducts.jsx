@@ -50,7 +50,7 @@ const AllProducts = () => {
             </div>
             <div className="flex-1">
                 {phones.length > 0 ? (
-                    <div className="my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-6 md:mx-8 lg:mx-0">
+                    <div className="mb-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-6 md:mx-8 lg:mx-0">
                         {phones.map((card) => (
                             <Cards key={card._id} card={card}></Cards>
                         ))}

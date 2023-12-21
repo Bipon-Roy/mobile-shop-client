@@ -7,9 +7,6 @@ const NavMenu = () => {
                 <NavLink to="/">Home</NavLink>
             </li>
             <li className="mr-5 font-medium">
-                <NavLink to="/about">About</NavLink>
-            </li>
-            <li className="mr-5 font-medium">
                 <NavLink to="/products">All Products</NavLink>
             </li>
         </>

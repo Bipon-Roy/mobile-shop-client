@@ -1,6 +1,6 @@
 import Banner from "../Banner/Banner";
 import Categories from "../Categories/Categories";
-import Services from "../Service/Services";
+import Services from "../Services/Services";
 
 const Home = () => {
     return (

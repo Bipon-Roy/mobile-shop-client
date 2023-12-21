@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const CategoryItem = ({ img, title }) => {
     return (
         <div className="py-6  flex flex-col justify-center items-center bg-[#F6F8FA] space-y-2 rounded-xl hover:hover:text-primary">
@@ -10,5 +11,8 @@ const CategoryItem = ({ img, title }) => {
         </div>
     );
 };
-
+CategoryItem.propTypes = {
+    img: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+};
 export default CategoryItem;

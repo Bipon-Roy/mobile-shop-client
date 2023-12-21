@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const Sidebar = ({
     setOS,
     setMemory,
@@ -101,5 +102,14 @@ const Sidebar = ({
         </div>
     );
 };
-
+Sidebar.propTypes = {
+    setOS: PropTypes.func.isRequired,
+    setMemory: PropTypes.func.isRequired,
+    setType: PropTypes.func.isRequired,
+    setProcessor: PropTypes.func.isRequired,
+    setName: PropTypes.func.isRequired,
+    setMinPrice: PropTypes.func.isRequired,
+    setMaxPrice: PropTypes.func.isRequired,
+    setSortOrder: PropTypes.func.isRequired,
+};
 export default Sidebar;

@@ -12,14 +12,7 @@ const Navbar = () => {
                             <img className="block w-full" src={logo} alt="#MobileShop" />
                         </div>
                     </div>
-                    {/* <div className="lg:w-[500px]">
-                        <input
-                            type="text"
-                            placeholder="Search Products"
-                            className="pl-4 py-3 rounded-3xl w-full"
-                            required
-                        />
-                    </div> */}
+
                     <div className="mr-4 text-white">
                         <div className="flex items-center gap-1">
                             <Link>

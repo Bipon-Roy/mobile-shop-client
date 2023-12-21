@@ -27,7 +27,7 @@ const Categories = () => {
                 <h1 className="font-semibold text-2xl">FEATURED CATEGORIES</h1>
                 <p>Get your desired product from featured category</p>
             </div>
-            <div className="my-8 grid grid-cols-8 gap-y-5 gap-x-2">
+            <div className="mx-5 lg:mx-0 my-8 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-y-5 gap-x-2">
                 {/* First Row */}
                 <CategoryItem img={phones} title="Phones & Tablet" />
                 <CategoryItem img={power} title="Power & Adapter" />
