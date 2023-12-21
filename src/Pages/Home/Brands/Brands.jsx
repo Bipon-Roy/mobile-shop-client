@@ -2,7 +2,7 @@ import { useState } from "react";
 import useProducts from "../../../hooks/useProducts";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import BrandProducts from "./BrandProducts";
-
+import "./Tab.css";
 const Brands = () => {
     const brands = ["Apple", "Samsung", "Google", "Oneplus", "Xiaomi"];
     const initialIndex = brands.indexOf(brands);
@@ -21,7 +21,7 @@ const Brands = () => {
                 <h1 className="font-semibold text-2xl uppercase">Available Brands</h1>
             </div>
             <div className="mt-6">
-                <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+                <Tabs defaultIndex={tabIndex[0]} onSelect={(index) => setTabIndex(index)}>
                     <TabList>
                         <Tab>Apple</Tab>
                         <Tab>Samsung</Tab>

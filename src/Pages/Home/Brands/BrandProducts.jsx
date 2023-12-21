@@ -1,6 +1,5 @@
 import "swiper/css/pagination";
 import ProductCards from "../../../Components/ProductCards";
-import "./Tab.css";
 const BrandProducts = ({ phones }) => {
     return (
         <div>

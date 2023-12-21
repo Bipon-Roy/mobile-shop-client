@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Home from "./Pages/Home/Home/Home.jsx";
 import AllProducts from "./Pages/AllProducts/AllProducts.jsx";
+import Error from "./Pages/ErrorPage/Error.jsx";
 
 const queryClient = new QueryClient();
 
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
+        errorElement: <Error />,
         children: [
             {
                 path: "/",
