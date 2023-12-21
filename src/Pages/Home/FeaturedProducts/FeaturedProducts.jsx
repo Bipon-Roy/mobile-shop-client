@@ -18,7 +18,10 @@ const FeaturedProducts = () => {
                 <p>Get your desired product from featured products</p>
             </div>
             {/* showing six random products */}
-            <div className="my-6 grid grid-cols-2 md:grid-cols-3 gap-3 lg:grid-cols-6 mx-5 lg:mx-0">
+            <div
+                className="my-6 grid grid-cols-2 md:grid-cols-3 gap-3 lg:grid-cols-6 mx-5 lg:mx-0"
+                data-aos="fade-up"
+            >
                 {phones.slice(3, 9).map((card) => (
                     <ProductCards key={card._id} phones={card}></ProductCards>
                 ))}

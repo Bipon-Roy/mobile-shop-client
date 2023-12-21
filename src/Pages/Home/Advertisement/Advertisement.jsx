@@ -6,8 +6,8 @@ import img2 from "../../../assets/Images/Advertisement/Middle-Banner_02-5081.jpg
 const Advertisement = () => {
     return (
         <div className="grid mx-5 grid-cols-1 md:grid-cols-2 gap-5 my-10 lg:mx-0">
-            <img src={img1} alt="Latest Deals" />
-            <img src={img2} alt="Latest Deals" />
+            <img src={img1} alt="Latest Deals" data-aos="zoom-in" />
+            <img src={img2} alt="Latest Deals" data-aos="zoom-in" />
         </div>
     );
 };

@@ -5,7 +5,10 @@ import { IoMdSettings } from "react-icons/io";
 
 const Services = () => {
     return (
-        <div className="mx-5 lg:mx-0 mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+            className="mx-5 lg:mx-0 mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+            data-aos="fade-up"
+        >
             {/* Services */}
             <div className="flex gap-3 rounded-md px-4 py-4 border shadow ">
                 {/* logo container */}
