@@ -22,7 +22,7 @@ function App() {
             <div className="flex-grow">
                 <Outlet />
             </div>
-            <div>
+            <div className="flex-none">
                 <Footer />
             </div>
         </div>
