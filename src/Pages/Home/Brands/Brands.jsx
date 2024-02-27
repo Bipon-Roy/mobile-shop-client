@@ -9,6 +9,7 @@ const Brands = () => {
     const [tabIndex, setTabIndex] = useState(initialIndex);
     const [phones] = useProducts();
 
+    //filtering brands product
     const apple = phones.filter((phone) => phone.brandName === "Apple");
     const samsung = phones.filter((phone) => phone.brandName === "Samsung");
     const google = phones.filter((phone) => phone.brandName === "Google");

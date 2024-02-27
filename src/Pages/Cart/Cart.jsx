@@ -1,6 +1,6 @@
 import useCart from "../../hooks/useCart";
 import CartsCard from "./CartsCard";
-
+//cart pages
 const Cart = () => {
     const [cart, , loading] = useCart();
     const isTrue = cart.length === 0;

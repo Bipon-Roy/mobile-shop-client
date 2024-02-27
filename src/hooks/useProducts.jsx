@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosUrl from "./useAxiosUrl";
 
+//custom hook for providing phones data
 const useProducts = () => {
     const axiosUrl = useAxiosUrl();
     const { data: phones = [], refetch } = useQuery({

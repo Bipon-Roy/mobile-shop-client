@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+
+//sidebar component for small and medium screen
 const Sidebar = ({
     setOS,
     setMemory,

@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+//image component
 const ImageContainer = ({ img, title }) => {
     return <img src={img} alt={title} />;
 };

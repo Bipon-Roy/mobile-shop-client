@@ -10,9 +10,10 @@ const ImageContainer = lazy(() => import("../../Components/ImageContainer"));
 
 const CartsCard = ({ cards }) => {
     const axiosUrl = useAxiosUrl();
-    const [, refetch] = useCart();
+    const [, refetch] = useCart(); //importing refetch from useCartHook
     const { _id, photo, name, brandName, type, price, shortDesc } = cards;
 
+    //deleting cart data
     const handleDeleteProduct = (id) => {
         Swal.fire({
             title: "Are you sure?",

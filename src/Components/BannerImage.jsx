@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+//image component for Advertising banner
 const BannerImage = ({ img }) => {
     return (
         <div>

@@ -17,6 +17,7 @@ const AllProducts = () => {
     const [minPrice, setMinPrice] = useState("");
     const [maxPrice, setMaxPrice] = useState("");
 
+    //fetching all phones data and sending query parameters for filtering
     useEffect(() => {
         axiosURl
             .get(
@@ -26,8 +27,9 @@ const AllProducts = () => {
                 setPhones(res.data);
                 setLoading(false);
             });
-    }, [axiosURl, minPrice, maxPrice, sortOrder, processor, memory, type, OS, name]);
+    }, [axiosURl, minPrice, maxPrice, sortOrder, processor, memory, type, OS, name]); //injecting dependency
 
+    //showing a loading state until data fetching is completed
     if (loading) {
         return (
             <div className="flex justify-center items-center">

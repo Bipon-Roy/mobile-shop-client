@@ -26,6 +26,8 @@ const Cards = ({ card }) => {
         shortDesc,
         keyFeature,
     } = card;
+
+    //posting cart data to the database
     const handleAddToCart = () => {
         const cartItem = {
             name,
