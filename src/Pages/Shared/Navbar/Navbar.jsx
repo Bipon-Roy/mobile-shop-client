@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import logo from "../../../assets/Images/logo.webp";
 import { GrCart } from "react-icons/gr";
 import NavMenu from "./NavMenu";
+import useCart from "../../../hooks/useCart";
 const Navbar = () => {
+    const [cart] = useCart();
     return (
         <div>
             <nav className="bg-black px-5 lg:px-0">
@@ -15,10 +17,12 @@ const Navbar = () => {
 
                     <div className="mr-4 text-white">
                         <div className="flex items-center gap-1">
-                            <Link>
+                            <Link to="/cart">
                                 <GrCart className="text-3xl" />
                             </Link>
-                            <span className="bg-primary px-2 rounded-full text-sm">1</span>
+                            <span className="bg-primary px-2 rounded-full text-sm">
+                                {cart.length}
+                            </span>
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
-
+import { Suspense, lazy } from "react";
+const ImageContainer = lazy(() => import("../../Components/ImageContainer"));
 const ProductDetails = () => {
     const phones = useLoaderData();
     const { name, brandName, price, shortDesc, photo, desc, keyFeature } = phones;
@@ -10,7 +11,9 @@ const ProductDetails = () => {
         <div className="max-w-[1380px] mx-auto my-11">
             <div className="flex flex-col md:flex-row mx-6 lg:mx-0 gap-5 lg:gap-10">
                 <div className="rounded-xl">
-                    <img src={photo} alt={name} />
+                    <Suspense fallback={<span className="loading loading-ring loading-md"></span>}>
+                        <ImageContainer img={photo} alt={name} />
+                    </Suspense>
                 </div>
                 <div className="space-y-3  w-fit font-medium ">
                     <div className="flex justify-between">

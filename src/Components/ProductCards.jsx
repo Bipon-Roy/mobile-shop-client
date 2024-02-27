@@ -1,53 +1,66 @@
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import { Suspense, lazy } from "react";
 import { Link } from "react-router-dom";
+import useAxiosUrl from "../hooks/useAxiosUrl";
+import Swal from "sweetalert2";
+import useCart from "../hooks/useCart";
+const ImageContainer = lazy(() => import("./CardImageContainer")); // lazy loading for image
 
-//styled-components button
-const DetailsBtn = styled.button`
-    padding: 4px 6px;
-    font-size: 0.75rem;
-    color: white;
-    background-color: #f17e23;
-    border-radius: 5px;
-
-    @media screen and (min-width: 768px) {
-        padding: 4px 10px;
-        font-size: 0.75rem;
-    }
-`;
-const AddToCartBtn = styled.button`
-    padding: 1px 3px;
-    font-size: 0.75rem;
-    color: #f17e23;
-    border: 1px solid #f17e23;
-    border-radius: 5px;
-    font-weight: 500;
-
-    @media screen and (min-width: 768px) {
-        padding: 4px 10px;
-    }
-`;
+// Card Component for home page
 const ProductCards = ({ phones }) => {
-    const { _id, photo, title, name, price } = phones;
+    const [, refetch] = useCart();
+    const axiosUrl = useAxiosUrl();
+    const { _id, photo, title, name, price, brandName, type, shortDesc, keyFeature } = phones;
+    const handleAddToCart = () => {
+        const cartItem = {
+            name,
+            brandName,
+            type,
+            price,
+            shortDesc,
+            keyFeature,
+            photo,
+        };
+        axiosUrl.post("/cart", cartItem).then((res) => {
+            if (res.data.insertedId) {
+                refetch();
+                Swal.fire({
+                    title: "Success!",
+                    text: "Product Successfully Added To Cart!",
+                    icon: "success",
+                    confirmButtonText: "Done!",
+                });
+            }
+        });
+    };
     return (
         <div className="flex flex-col transition-all hover:shadow-xl hover:rounded-xl relative">
             <p className="absolute right-0 top-0 bg-primary px-2 py-1 max-w-fit text-xs rounded text-white">
                 15% OFF
             </p>
             <div className="pt-5 pb-2 flex justify-center">
-                <img className="w-[140px] h-[140px]" src={photo} alt={title} />
+                <Suspense fallback={<span className="loading loading-ring loading-md"></span>}>
+                    <ImageContainer img={photo} alt={title} />
+                </Suspense>
             </div>
 
             <div className="flex-grow my-2 text-center text-sm md:text-base">
                 <p className="font-medium">{name}</p>
                 <p className="font-medium">{price}$</p>
             </div>
-            <div className="md:px-4 mb-4 flex gap-2 md:gap-3 justify-center ">
-                <Link to={`/phoneDetails/${_id}`}>
-                    <DetailsBtn>See Details</DetailsBtn>
+            <div className="pt-2 p-1 md:p-2 mb-5 flex gap-3 justify-center ">
+                <Link
+                    className="px-[3px] md:px-2 py-1 rounded-md text-xs md:text-sm font-medium text-white bg-primary"
+                    to={`/phoneDetails/${_id}`}
+                >
+                    See Details
                 </Link>
-
-                <AddToCartBtn>Add to Cart</AddToCartBtn>
+                <Link
+                    onClick={handleAddToCart}
+                    className="px-[1px] md:px-2 py-1 rounded-md text-xs md:text-sm font-medium border text-primary border-primary"
+                >
+                    Add to Cart
+                </Link>
             </div>
         </div>
     );

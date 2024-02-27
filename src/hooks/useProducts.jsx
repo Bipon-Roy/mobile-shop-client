@@ -4,7 +4,7 @@ import useAxiosUrl from "./useAxiosUrl";
 const useProducts = () => {
     const axiosUrl = useAxiosUrl();
     const { data: phones = [], refetch } = useQuery({
-        queryKey: ["menu"],
+        queryKey: ["phones"],
         queryFn: async () => {
             const res = await axiosUrl.get("/phones");
             return res.data;

@@ -1,41 +1,59 @@
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { Suspense, lazy } from "react";
+import useAxiosUrl from "../../hooks/useAxiosUrl";
+import Swal from "sweetalert2";
+import useCart from "../../hooks/useCart";
 
-//styled-components button
-const DetailsBtn = styled.button`
-    padding: 4px 6px;
-    font-size: 0.75rem;
-    color: white;
-    background-color: #f17e23;
-    border-radius: 5px;
-
-    @media screen and (min-width: 768px) {
-        padding: 4px 12px;
-        font-size: 0.75rem;
-    }
-`;
-const AddToCartBtn = styled.button`
-    padding: 1px 3px;
-    font-size: 0.75rem;
-    color: #f17e23;
-    border: 1px solid #f17e23;
-    border-radius: 5px;
-    font-weight: 500;
-
-    @media screen and (min-width: 768px) {
-        padding: 4px 12px;
-    }
-`;
+const ImageContainer = lazy(() => import("../../Components/CardImageContainer"));
 
 //card component for only All Products page
 const Cards = ({ card }) => {
-    const { _id, photo, title, name, price, OS, memory, processor } = card;
-
+    const axiosUrl = useAxiosUrl();
+    const [, refetch] = useCart();
+    // destructuring properties
+    const {
+        _id,
+        photo,
+        title,
+        name,
+        price,
+        OS,
+        memory,
+        processor,
+        brandName,
+        type,
+        shortDesc,
+        keyFeature,
+    } = card;
+    const handleAddToCart = () => {
+        const cartItem = {
+            name,
+            brandName,
+            type,
+            price,
+            shortDesc,
+            keyFeature,
+            photo,
+        };
+        axiosUrl.post("/cart", cartItem).then((res) => {
+            if (res.data.insertedId) {
+                Swal.fire({
+                    title: "Success!",
+                    text: "Product Successfully Added To Cart!",
+                    icon: "success",
+                    confirmButtonText: "Done!",
+                });
+                refetch();
+            }
+        });
+    };
     return (
         <div className="flex flex-col border">
             <div className="px-5 pt-5 pb-2 flex justify-center">
-                <img className="h-[180px] w-full" src={photo} alt={title} />
+                <Suspense fallback={<span className="loading loading-ring loading-md"></span>}>
+                    <ImageContainer img={photo} alt={title} />
+                </Suspense>
             </div>
 
             <div className="px-5 text-center ">
@@ -57,12 +75,19 @@ const Cards = ({ card }) => {
                         Processor: <span className="">{processor}</span>
                     </p>
                 </div>
-                <div className="pt-2 mb-5 flex gap-3 justify-center ">
-                    <Link to={`/phoneDetails/${_id}`}>
-                        <DetailsBtn>See Details</DetailsBtn>
+                <div className="pt-2 mb-5 flex gap-3 justify-center">
+                    <Link
+                        className="px-3 py-1 rounded-md text-sm font-medium text-white bg-primary"
+                        to={`/phoneDetails/${_id}`}
+                    >
+                        See Details
                     </Link>
-
-                    <AddToCartBtn>Add to Cart</AddToCartBtn>
+                    <Link
+                        className="px-3 py-1 rounded-md text-sm font-medium border text-primary border-primary"
+                        onClick={handleAddToCart}
+                    >
+                        Add to Cart
+                    </Link>
                 </div>
             </div>
         </div>

@@ -8,6 +8,8 @@ import Home from "./Pages/Home/Home/Home.jsx";
 import AllProducts from "./Pages/AllProducts/AllProducts.jsx";
 import Error from "./Pages/ErrorPage/Error.jsx";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails.jsx";
+import Cart from "./Pages/Cart/Cart.jsx";
+import CheckOut from "./Pages/CheckOut/CheckOut.jsx";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,16 @@ const router = createBrowserRouter([
                 element: <ProductDetails />,
                 loader: ({ params }) =>
                     fetch(`https://mobile-shop-server-nu.vercel.app/phones/${params.id}`),
+            },
+            {
+                path: "/cart",
+                element: <Cart />,
+            },
+            {
+                path: "/checkout/:id",
+                element: <CheckOut />,
+                loader: ({ params }) =>
+                    fetch(`https://mobile-shop-server-nu.vercel.app/cart/${params.id}`),
             },
         ],
     },

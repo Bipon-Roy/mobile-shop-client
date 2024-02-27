@@ -1,7 +1,8 @@
 import Slider from "./Slider";
 import banner1 from "../../../assets/Images/banner1.webp";
 import banner2 from "../../../assets/Images/banner2.webp";
-
+import { lazy, Suspense } from "react";
+const BannerImageContainer = lazy(() => import("../../../Components/BannerImage"));
 const Banner = () => {
     return (
         <div className="mx-5 lg:mx-0 mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -10,10 +11,14 @@ const Banner = () => {
             </div>
             <div className="grid grid-cols-2 gap-5 lg:gap-6 lg:grid-cols-1">
                 <div>
-                    <img className="md:h-[227px] md:w-full" src={banner1} alt="LatestDeals" />
+                    <Suspense fallback={<span className="loading loading-ring loading-md"></span>}>
+                        <BannerImageContainer img={banner1} />
+                    </Suspense>
                 </div>
                 <div>
-                    <img className="md:h-[227px] md:w-full" src={banner2} alt="LatestDeals" />
+                    <Suspense fallback={<span className="loading loading-ring loading-md"></span>}>
+                        <BannerImageContainer img={banner2} />
+                    </Suspense>
                 </div>
             </div>
         </div>

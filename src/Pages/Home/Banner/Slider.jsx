@@ -14,7 +14,8 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
-
+import { Suspense, lazy } from "react";
+const ImageContainer = lazy(() => import("../../../Components/ImageContainer"));
 const Slider = () => {
     return (
         <Swiper
@@ -29,16 +30,24 @@ const Slider = () => {
             }}
         >
             <SwiperSlide>
-                <img src={slider1} alt="LatestDeals" />
+                <Suspense fallback={<span className="loading loading-ring loading-md"></span>}>
+                    <ImageContainer img={slider1} alt="LatestDeals" />
+                </Suspense>
             </SwiperSlide>
             <SwiperSlide>
-                <img src={slider2} alt="LatestDeals" />
+                <Suspense fallback={<span className="loading loading-ring loading-md"></span>}>
+                    <ImageContainer img={slider2} alt="LatestDeals" />
+                </Suspense>
             </SwiperSlide>
             <SwiperSlide>
-                <img src={slider3} alt="LatestDeals" />
+                <Suspense fallback={<span className="loading loading-ring loading-md"></span>}>
+                    <ImageContainer img={slider3} alt="LatestDeals" />
+                </Suspense>
             </SwiperSlide>
             <SwiperSlide>
-                <img src={slider4} alt="LatestDeals" />
+                <Suspense fallback={<span className="loading loading-ring loading-md"></span>}>
+                    <ImageContainer img={slider4} alt="LatestDeals" />
+                </Suspense>
             </SwiperSlide>
         </Swiper>
     );
