@@ -31,22 +31,22 @@ const Slider = () => {
         >
             <SwiperSlide>
                 <Suspense fallback={<span className="loading loading-ring loading-md"></span>}>
-                    <ImageContainer img={slider1} alt="LatestDeals" />
+                    <ImageContainer img={slider1} title="LatestDeals" height="" />
                 </Suspense>
             </SwiperSlide>
             <SwiperSlide>
                 <Suspense fallback={<span className="loading loading-ring loading-md"></span>}>
-                    <ImageContainer img={slider2} alt="LatestDeals" />
+                    <ImageContainer img={slider2} title="LatestDeals" height="" />
                 </Suspense>
             </SwiperSlide>
             <SwiperSlide>
                 <Suspense fallback={<span className="loading loading-ring loading-md"></span>}>
-                    <ImageContainer img={slider3} alt="LatestDeals" />
+                    <ImageContainer img={slider3} title="LatestDeals" height="" />
                 </Suspense>
             </SwiperSlide>
             <SwiperSlide>
                 <Suspense fallback={<span className="loading loading-ring loading-md"></span>}>
-                    <ImageContainer img={slider4} alt="LatestDeals" />
+                    <ImageContainer img={slider4} title="LatestDeals" height="" />
                 </Suspense>
             </SwiperSlide>
         </Swiper>
