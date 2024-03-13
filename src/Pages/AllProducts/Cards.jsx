@@ -5,7 +5,7 @@ import useAxiosUrl from "../../hooks/useAxiosUrl";
 import Swal from "sweetalert2";
 import useCart from "../../hooks/useCart";
 
-const ImageContainer = lazy(() => import("../../Components/ImageContainer"));
+const ImageContainer = lazy(() => import("../../Components/CardImageContainer"));
 
 //card component for only All Products page
 const Cards = ({ card }) => {

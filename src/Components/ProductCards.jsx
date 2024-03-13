@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import useAxiosUrl from "../hooks/useAxiosUrl";
 import Swal from "sweetalert2";
 import useCart from "../hooks/useCart";
-const ImageContainer = lazy(() => import("./ImageContainer")); // lazy loading for image
+const ImageContainer = lazy(() => import("./CardImageContainer")); // lazy loading for image
 
 // Card Component for home page
 const ProductCards = ({ phones }) => {
@@ -39,12 +39,12 @@ const ProductCards = ({ phones }) => {
                 15% OFF
             </p>
             <div className="pt-5 pb-2 flex justify-center">
-                <Suspense fallback={<span className="loading loading-ring loading-md "></span>}>
-                    <ImageContainer img={photo} alt={title} height="44" />
+                <Suspense fallback={<span className="loading loading-ring loading-md"></span>}>
+                    <ImageContainer img={photo} alt={title} />
                 </Suspense>
             </div>
 
-            <div className="flex-grow my-2 text-center text-sm md:text-base ">
+            <div className="flex-grow my-2 text-center text-sm md:text-base">
                 <p className="font-medium">{name}</p>
                 <p className="font-medium">{price}$</p>
             </div>
